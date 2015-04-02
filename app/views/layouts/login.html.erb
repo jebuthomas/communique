@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -10,15 +9,9 @@
     <meta name="author" content="">
     <link rel="icon" href="/favicon.ico">
 
-    <title>Justified Nav Template for Bootstrap</title>
+    <title>Signin Template for Bootstrap</title>
 
-    
-
-    <%= stylesheet_link_tag    "application", :media => "all" %>
-  
-  <%= csrf_meta_tags %>
-
-    
+    <%= stylesheet_link_tag    "login", :media => "all" %>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -28,37 +21,16 @@
   </head>
 
   <body>
-  <center>
-
 
     <div class="container">
 
-      <!-- The justified navigation menu is meant for single line per list item.
-           Multiple lines will require custom code not provided by Bootstrap. -->
-      <div class="masthead">
-      <center>
-        <h1 class="text-muted">Welcome to Communique</h1>
-         <body>
+      <%= render :partial => "layouts/flash_message" %>
 
-
-    
-
-      <!-- Jumbotron -->
-      <div class="jumbotron">
-        <%= render :partial => "layouts/flash_message" %>
-
-		<%= yield %>
-      </div>
-
-      <!-- Site footer -->
-      <footer class="footer">
-        <p>&copy; Company 2014</p>
-      </footer>
+    <%= yield %>
 
     </div> <!-- /container -->
 
-    <%= javascript_include_tag "application" %>
+
     
   </body>
-
 </html>
