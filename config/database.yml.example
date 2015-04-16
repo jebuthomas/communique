@@ -1,8 +1,0 @@
-
-development:
-  adapter: postgresql
-  encoding: unicode
-  database: communique_development
-  pool: 5
-  username: ganesh
-  password: 123456

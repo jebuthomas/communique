@@ -20,9 +20,23 @@
 	    color: white;
 	}
 	form {
-	    border: 8px solid #a1a1a1;
+	    border: 0px solid #ccc;
 	    padding: 0px 0px; 
-	    background: #3399FF;
-        width: 300px;
+	    background: #E0E0E0   ;
+        width: 350px;
+        height: 380px;
 	    border-radius: 20px;
 	}
+	 input[type=submit]{
+float:right
+margin-right:25px;
+margin-top:25px;
+width:80px
+height:30px
+font-size:14px;
+font-weight:bold;
+color:black;
+background-color:#acd6ef;
+border-radius:30px;
+border:1px solid #66add6;
+}
