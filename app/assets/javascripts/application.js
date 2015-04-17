@@ -15,4 +15,5 @@
 
 //= require twitter/bootstrap
 
-//= require_tree .
+
+//= require application/main

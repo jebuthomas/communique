@@ -10,9 +10,7 @@ class ApplicationController < ActionController::Base
   	return current_user ? "application" : "login"
   end
 
-  def some
-  	adga
-  end
+  
 
 
 end

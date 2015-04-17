@@ -3,17 +3,13 @@ Communique::Application.routes.draw do
   devise_for :users
 
   root to: "home#index"
+  match '/about_us' => 'home#about_us'
 
-  resources :home do 
-    collection do
-      get 'feedbacks'
+  namespace :admin do
+      resources :surveys
     end
-
-    member do
-      get 'give_feedback'
-    end
-
-  end
+    
+  resources :surveys, :only => [:index, :show]
 
 
   

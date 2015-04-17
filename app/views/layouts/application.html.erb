@@ -37,11 +37,17 @@
         <h3 class="text-muted">Communique</h3>
         <nav>
           <ul class="nav nav-justified">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Dashboard</a></li>
-            <li><a href="#">Survey</a></li>
+            <li><%= link_to "Dashboard", root_path, :class => "#{(params[:controller]=="home" and params[:action] == "index") ? "active" : ""}" %></li>
+            <li>
+              <% if current_user.is_admin? %>
+                <%= link_to "Surveys", admin_surveys_path, :class => "#{params[:controller]=="surveys" ? "active" : ""}" %>
+              <% else %>
+                <%= link_to "Surveys", surveys_path, :class => "#{params[:controller]=="surveys" ? "active" : ""}" %>
+              <% end %>
+
+            </li>
             <li><a href="#">Feedbacks</a></li>
-            <li><a href="#">Pooling</a></li>
+            <li><%= link_to "About Us", about_us_path, :class => "#{params[:action] == "about_us" ? "active" : ""}" %></li>
             <li><%= link_to "Sign out",destroy_user_session_path, :method => :delete %></li>
           </ul>
         </nav>
@@ -54,9 +60,9 @@
         <%= render :partial => "layouts/flash_message" %>
         </div>
 
-
+<div class="clearfix">
         <%= yield %>
-
+</div>
       </div>
 
 

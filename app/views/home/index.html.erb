@@ -1,9 +1,32 @@
-<div id="user_nav">
- <% if user_signed_in? %>
-  Signed in as <%= current_user.email %>.Not you?
-  <%= link_to "Sign out",destroy_user_session_path, :method => :delete %>
- <% else %>
-  <%= link_to "Sign_up", new_user_registration_path %> or <%link_to "sign in", new_user_session_path %>
-  <% end %> 
-<div>
+<h2>Survey</h2>
 
+<div class="table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>survey No</th>
+				<th>Name</th>
+				<th>Date</th>
+				<th>start date</th>
+				<th>End Date </th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1,001</td>
+				<td>yashu</td>
+				<td>27-01-2015</td>
+				<td>27-01-2015</td>
+				<td>30-01-2015</td>
+			</tr>
+			<tr>
+				<td>1,002</td>
+				<td>amet</td>
+				<td>1-02-2015</td>
+				<td>1-02-2015</td>
+				<td>05-02-2015</td>
+			</tr>
+			
+		</tbody>
+	</table>
+</div>
