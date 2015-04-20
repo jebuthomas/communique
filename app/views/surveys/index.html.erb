@@ -1,0 +1,28 @@
+<h2>Survey</h2>
+
+<div class="table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<tr>
+				
+				<th>Name</th>
+				<th>Survey Type</th>
+				<th>Expiry Date</th>
+				<th>Created By</th>
+				<th>Created At</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% for survey in @surveys %>
+			<tr>
+				
+				<td><%= link_to survey.name, survey_path(survey) %></td>
+				<td><%= survey.survey_type %></td>
+				<td><%= survey.expiry_date %></td>
+				<td><%= survey.user %></td>
+			</tr>
+			<% end %>
+			
+		</tbody>
+	</table>
+</div>
